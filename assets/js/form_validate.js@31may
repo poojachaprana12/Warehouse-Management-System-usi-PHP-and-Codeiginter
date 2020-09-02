@@ -1,0 +1,54 @@
+$(document).ready(function(){
+	$("#subform").click(function(){
+		var lname = $("#lname").val();
+		var fname = $("#fname").val();
+		var uemail = $("#uemail").val();
+		var c_mail = $("#c_mail").val();
+		var pass = $("#pass").val();
+		var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+		if(lname =="" || fname=="" || uemail=="" || c_mail=="" || pass==""){
+			 BootstrapDialog.confirm({
+					title: 'WARNING',
+					message: 'Please Fill All Fields Name',
+					type: BootstrapDialog.TYPE_DANGER,
+				});
+				$("#lname").focus();
+				$("#fname").focus();
+				$("#uemail").focus();
+				$("#c_mail").focus();
+				$("#pass").focus();
+			return false;
+		 }
+	
+		 if(uemail!=c_mail){
+			 BootstrapDialog.confirm({
+						title: 'WARNING',
+						message: 'Email and confirm email should be same.',
+						type: BootstrapDialog.TYPE_DANGER,
+					});
+				return false;
+		}
+			
+		if (filter.test(uemail) || filter.test(c_mail)) {
+				return true;
+		}
+		else {
+			 BootstrapDialog.confirm({
+							title: 'WARNING',
+							message: 'Email and confirm email should be valid email.',
+							type: BootstrapDialog.TYPE_DANGER,
+						});
+				return false;
+		}
+		
+		});
+		
+	
+       $("#btns").click(function(){
+	      $(".create-form").css("display","block");	
+	  	  $(".hides").css("display","none");	
+	  
+	}); 
+	
+});
+
