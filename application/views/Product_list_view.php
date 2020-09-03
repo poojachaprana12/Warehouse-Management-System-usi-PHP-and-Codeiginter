@@ -56,7 +56,7 @@
 								<div class="col-md-4">
 									<div class="input-group">
 									<span class="input-group-addon">
-									<i class="glyphicon glyphicon-shopping-cart"></i>
+									<i class="glyphicon glyphicon-shopping-cart"></i> In Stock
 									</span>
 									<input type="text" class="form-control" name="pquantity" value="<?php echo $list->quantity; ?>" placeholder="Product Quantity" required>
 								</div>
@@ -65,7 +65,7 @@
 								<div class="col-md-4">
 									<div class="input-group">
 									<span class="input-group-addon">
-									<i class="glyphicon glyphicon-th-large"></i>
+									<i class="glyphicon glyphicon-th-large"></i> Price
 									</span>
 									<input type="number" class="form-control" name="price" value="<?php echo $list->price; ?>" placeholder="Price" required>
 									
