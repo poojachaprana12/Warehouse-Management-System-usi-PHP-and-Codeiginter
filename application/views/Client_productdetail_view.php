@@ -64,7 +64,7 @@
 								<div class="col-md-4">
 									<div class="input-group">
 									<span class="input-group-addon">
-									<i class="glyphicon glyphicon-shopping-cart"></i> Quantity
+									<i class="glyphicon glyphicon-shopping-cart"></i> In Stock
 									</span>
 									<input type="text" class="form-control" name="pquantity" value="<?php echo $list->quantity; ?>" placeholder="Product Quantity" required>
 								</div>
